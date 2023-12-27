@@ -29,7 +29,8 @@ const page = async () => {
               key={post._id}
               heading={post.heading}
               description={post.description}
-              id={user._id.toString()}
+              userId={user._id.toString()}
+              postId={post._id.toString()}
             />
           ))
         )}

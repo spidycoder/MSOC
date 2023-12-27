@@ -74,7 +74,7 @@ const page = () => {
   }
   return (
     sessionStatus !== "authenticated" && (
-      <div className="flex flex-col items-center justify-center p-24">
+      <div className="flex flex-col items-center bg-slate-300 min-h-screen justify-center p-24">
         <div className="bg-[#212121] p-9 rounded shadow-md w-96">
           <h1 className="text-4xl text-center font-semibold mb-8 text-white">
             Register

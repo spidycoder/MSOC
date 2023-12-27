@@ -37,7 +37,8 @@ const UserDetails = async ({ email }: { email: string }) => {
               heading={post.heading}
               description={post.description}
               email={email}
-              id={post._id.toString()}
+              postId={post._id.toString()}
+              userId={user._id.toString()}
               flag={true}
             />
           ))

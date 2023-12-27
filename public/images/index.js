@@ -16,6 +16,11 @@ import profilePicture from "./profilePicture.jpg";
 import write from "./write.png";
 import linkedInIcon from "./linkedIn.png";
 import instaIcon from "./instaLogo.png";
+import like from "./like.png";
+import dislike from "./dislike.png";
+import save from "./save.png";
+import heart from "./heart.png"
+import support from "./support.png"
 
 export {
   mainPage,
@@ -36,4 +41,9 @@ export {
   write,
   instaIcon,
   linkedInIcon,
+  like,
+  dislike,
+  save,
+  heart,
+  support,
 };

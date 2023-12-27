@@ -2,16 +2,18 @@
 import React, { useState } from "react";
 import OptionBox from "./OptionBox";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface Props {
   heading: string;
   description: string;
   email: string;
-  id: string;
+  postId: string;
+  userId:string;
   flag: Boolean;
 }
 
-const PostTemplate2 = ({ heading, description, email, id, flag }: Props) => {
+const PostTemplate2 = ({ heading, description, email, postId,userId, flag }: Props) => {
   const router = useRouter();
   const [isOptionBoxOpen, setOptionBoxOpen] = useState(false);
   const handleButtonClick = () => {
@@ -32,7 +34,7 @@ const PostTemplate2 = ({ heading, description, email, id, flag }: Props) => {
         },
         body: JSON.stringify({
           email: email,
-          id: id,
+          id: postId,
         }),
       });
       if (res.status === 200) {
@@ -55,31 +57,44 @@ const PostTemplate2 = ({ heading, description, email, id, flag }: Props) => {
         <div className="flex flex-row justify-between">
           <h2 className="text-xl font-bold mb-2 text-left">{heading}</h2>
           {flag && (
-          <div className="flex">
-            {isOptionBoxOpen ? (
-              <OptionBox
-                onClose={handleClose}
-                onEdit={handleEdit}
-                onDelete={handleDelete}
-                heading={heading}
-                description={description}
-                email={email}
-                id={id}
-              />
-            ) : (
-              <button
-                type="button"
-                onClick={handleButtonClick}
-                className="font-bold pb-3"
-              >
-                ...
-              </button>
-            )}
-          </div>
+            <div className="flex">
+              {isOptionBoxOpen ? (
+                <OptionBox
+                  onClose={handleClose}
+                  onEdit={handleEdit}
+                  onDelete={handleDelete}
+                  heading={heading}
+                  description={description}
+                  email={email}
+                  id={postId}
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleButtonClick}
+                  className="font-bold pb-3"
+                >
+                  ...
+                </button>
+              )}
+            </div>
           )}
         </div>
 
-        <p className="text-sm text-gray-700">{description}</p>
+        <Link
+          href={{
+            pathname: `/posts/${postId}`,
+            query: {
+              userId: userId,
+              postId: postId,
+            },
+          }}
+        >
+          <p className="text-sm text-gray-700">
+            {description.substring(0, 400)}......
+            <span className="hover:text-black hover:font-bold font-bold">read more</span>
+          </p>
+        </Link>
       </div>
     </div>
   );

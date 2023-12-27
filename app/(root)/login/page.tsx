@@ -57,7 +57,7 @@ const page = () => {
   }
   return (
     sessionStatus !== "authenticated" && (
-      <div className="flex flex-col items-center justify-between p-24">
+      <div className="flex flex-col items-center bg-slate-300 min-h-screen justify-between p-24">
         <div className="bg-[#212121] p-9 rounded shadow-md w-96">
           <h1 className="text-4xl text-center font-semibold mb-8 text-white">
             Login
@@ -99,7 +99,7 @@ const page = () => {
             >
               Login
             </button>
-            <p className="text-white text-[16px] mb-2 mt-2">
+            {/* <p className="text-white text-[16px] mb-2 mt-2">
               Forget Password?
               <Link
                 href="/forgetpassword"
@@ -107,7 +107,7 @@ const page = () => {
               >
                 Reset Here
               </Link>
-            </p>
+            </p> */}
           </form>
           <button
             onClick={() => signIn("google")}

@@ -36,9 +36,19 @@ const userSchema = new Schema(
             type: String,
             required: false,
           },
+          likes: {
+            type: Number,
+            required: false,
+            default: 0,
+          },
+          hearts: {
+            type: Number,
+            required: false,
+            default: 0,
+          },
         },
       ],
-      default: [], // Initialize posts as an empty array by default
+      default: [],
     },
     resetToken: {
       type: String,

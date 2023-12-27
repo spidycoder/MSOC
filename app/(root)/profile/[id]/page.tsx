@@ -39,7 +39,8 @@ const page = async ({ params: { id } }: Props) => {
               heading={post.heading}
               description={post.description}
               email={user.email}
-              id={post._id.toString()}
+              postId={post._id.toString()}
+              userId={user._id.toString()}
               flag={false}
             />
           ))
