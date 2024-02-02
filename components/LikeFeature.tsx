@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { like, profileIcon, heart } from "@/public/images";
+import like  from "@/public/images/like.png";
+import profileIcon from "@/public/images/profileIcon.png"
+import heart from "@/public/images/heart.png"
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import Link from "next/link";

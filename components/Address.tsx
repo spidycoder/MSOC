@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
-import { emailicon,callicon,homeIcon } from "@/public/images";
+import emailicon  from "@/public/images/emailIcon.png";
+import homeIcon  from "@/public/images/homeIcon.png";
+import callicon  from "@/public/images/callIcon.png";
 import Image from "next/image";
 import { Slide } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";

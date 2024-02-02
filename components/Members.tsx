@@ -1,7 +1,9 @@
 import React from "react";
 import { members } from "@/constants/index";
 import Image from "next/image";
-import { linkedInIcon, instaIcon, emailicon } from "@/public/images";
+import linkedInIcon from "@/public/images/linkedIn.png";
+import instaIcon from "@/public/images/instaLogo.png"
+import emailicon from "@/public/images/emailIcon.png"
 import Link from "next/link";
 
 const Members = () => {

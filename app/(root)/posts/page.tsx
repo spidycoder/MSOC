@@ -1,7 +1,7 @@
 import React from "react";
 import PostTemplate from "@/components/PostTemplate";
 import Link from "next/link";
-import {write} from "@/public/images/index.js"
+import write from "@/public/images/write.png";
 import Image from "next/image";
 import { getAllUsers } from "@/lib/action";
 

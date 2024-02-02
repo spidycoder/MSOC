@@ -1,7 +1,6 @@
 "use server";
 import User from "@/lib/models/users.model";
 import { connectDB } from "../mongoose";
-import { Ruthie } from "next/font/google";
 
 export async function getAllUsers() {
   try {

@@ -1,8 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { teacher1,teacher2,teacher3,teacher4,teacher5,teacher6 } from "@/public/images";
-import { Slide } from "react-awesome-reveal";
+import teacher1 from "@/public/images/teacher1.jpeg";
+import teacher2 from "@/public/images/teacher2.jpeg"
+import teacher3 from "@/public/images/teacher3.jpeg"
+import teacher4 from "@/public/images/teacher4.jpeg"
+import teacher5 from "@/public/images/teacher5.jpeg"
+import teacher6 from "@/public/images/teacher6.jpeg"
 
 const Contributors = () => {
   return (
